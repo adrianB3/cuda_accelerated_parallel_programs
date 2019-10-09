@@ -2,6 +2,9 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <CudaCompile Include="main.cu" />
+    <CudaCompile Include="shape.cu">
+      <Filter>core</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="core">
@@ -15,6 +18,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="tensor2D.h">
+      <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="shape.h">
       <Filter>core</Filter>
     </ClInclude>
   </ItemGroup>
