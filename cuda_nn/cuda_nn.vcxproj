@@ -79,6 +79,12 @@
   <ItemGroup>
     <CudaCompile Include="main.cu" />
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="tensor2D.cu" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tensor2D.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
     <Import Project="$(VCTargetsPath)\BuildCustomizations\CUDA 10.1.targets" />
