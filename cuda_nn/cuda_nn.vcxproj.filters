@@ -5,15 +5,24 @@
     <CudaCompile Include="shape.cu">
       <Filter>core</Filter>
     </CudaCompile>
+    <CudaCompile Include="sigmoid_activation.cu">
+      <Filter>nn_layers</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="core">
       <UniqueIdentifier>{54e206a7-413c-48f2-b906-a1d9e47416fd}</UniqueIdentifier>
     </Filter>
+    <Filter Include="nn_layers">
+      <UniqueIdentifier>{2996b916-9bf0-4d09-bf13-6d3527d4bab3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="tensor2D.cu">
       <Filter>core</Filter>
+    </ClCompile>
+    <ClCompile Include="nnlayer.cu">
+      <Filter>nn_layers</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -22,6 +31,12 @@
     </ClInclude>
     <ClInclude Include="shape.h">
       <Filter>core</Filter>
+    </ClInclude>
+    <ClInclude Include="nnlayer.h">
+      <Filter>nn_layers</Filter>
+    </ClInclude>
+    <ClInclude Include="sigmoid_activation.h">
+      <Filter>nn_layers</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

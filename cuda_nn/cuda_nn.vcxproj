@@ -82,12 +82,16 @@
   <ItemGroup>
     <CudaCompile Include="main.cu" />
     <CudaCompile Include="shape.cu" />
+    <CudaCompile Include="sigmoid_activation.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="nnlayer.cu" />
     <ClCompile Include="tensor2D.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="nnlayer.h" />
     <ClInclude Include="shape.h" />
+    <ClInclude Include="sigmoid_activation.h" />
     <ClInclude Include="tensor2D.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
