@@ -80,7 +80,9 @@
     </CudaCompile>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <CudaCompile Include="fully_connected_layer.cu" />
     <CudaCompile Include="main.cu" />
+    <CudaCompile Include="relu_activation.cu" />
     <CudaCompile Include="shape.cu" />
     <CudaCompile Include="sigmoid_activation.cu" />
   </ItemGroup>
@@ -89,7 +91,9 @@
     <ClCompile Include="tensor2D.cu" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="fully_connected_layer.h" />
     <ClInclude Include="nnlayer.h" />
+    <ClInclude Include="relu_activation.h" />
     <ClInclude Include="shape.h" />
     <ClInclude Include="sigmoid_activation.h" />
     <ClInclude Include="tensor2D.h" />

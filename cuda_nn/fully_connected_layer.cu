@@ -1,5 +1,6 @@
 #include "fully_connected_layer.h"
 #include <random>
+#include <stdlib.h>
 #include <cuda_runtime.h>
 #include <device_launch_parameters.h>
 
@@ -40,6 +41,38 @@ __global__ void fullyConnectedLayerBackprop(float* W, float* dZ, float* dA, int 
 			dA_value += W[i * W_x_dim + row] * dZ[i * dZ_x_dim + col];
 		}
 		dA[row * dA_x_dim + col] = dA_value;
+	}
+}
+
+__global__ void fullyConnectedLayerUpdateWeights(float* dZ, float* A, float* W, int dZ_x_dim, int dZ_y_dim, int A_x_dim, int A_y_dim, float learning_rate)
+{
+	int row = blockIdx.y * blockDim.y + threadIdx.y;
+	int col = blockIdx.x * blockDim.x + threadIdx.x;
+
+	int W_x_dim = A_y_dim;
+	int W_y_dim = dZ_y_dim;
+
+	float dW_value = 0.0f;
+
+	if (row < W_y_dim && col < W_x_dim)
+	{
+		for (int i = 0; i < dZ_x_dim; i++)
+		{
+			dW_value += dZ[row * dZ_x_dim + i] * A[col * A_x_dim + i];
+		}
+		W[row * W_x_dim + col] = W[row * W_x_dim + col] - learning_rate * (dW_value / A_x_dim);
+	}
+}
+
+__global__ void fullyConnectedLayerUpdateBias(float* dZ, float* b, int dZ_x_dim, int dZ_y_dim, int b_x_dim, float learning_rate)
+{
+	int index = blockIdx.x * blockDim.x + threadIdx.x;
+
+	if (index < dZ_x_dim * dZ_y_dim)
+	{
+		int dZ_x = index % dZ_x_dim;
+		int dZ_y = index / dZ_y_dim;
+		atomicAdd()
 	}
 }
 
