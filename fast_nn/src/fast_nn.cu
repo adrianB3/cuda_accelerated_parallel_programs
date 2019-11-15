@@ -1,12 +1,14 @@
 /*
  ============================================================================
  Name        : fast_nn.cu
- Author      : AdrianB
+ Author      : AdrianBalanescu
  Version     :
  Copyright   : Copyright 2019 Adrian Balanescu
  Description : CUDA compute reciprocals
  ============================================================================
  */
+#include "cuda_runtime.h"
+#include "device_launch_parameters.h"
 
 #include <iostream>
 #include <numeric>
@@ -15,6 +17,7 @@
 
 int main(void)
 {
-	/// TODO
+  
+
 	return 0;
 }
