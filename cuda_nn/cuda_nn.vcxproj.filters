@@ -8,6 +8,12 @@
     <CudaCompile Include="sigmoid_activation.cu">
       <Filter>nn_layers</Filter>
     </CudaCompile>
+    <CudaCompile Include="relu_activation.cu">
+      <Filter>nn_layers</Filter>
+    </CudaCompile>
+    <CudaCompile Include="fully_connected_layer.cu">
+      <Filter>nn_layers</Filter>
+    </CudaCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="core">
@@ -36,6 +42,12 @@
       <Filter>nn_layers</Filter>
     </ClInclude>
     <ClInclude Include="sigmoid_activation.h">
+      <Filter>nn_layers</Filter>
+    </ClInclude>
+    <ClInclude Include="relu_activation.h">
+      <Filter>nn_layers</Filter>
+    </ClInclude>
+    <ClInclude Include="fully_connected_layer.h">
       <Filter>nn_layers</Filter>
     </ClInclude>
   </ItemGroup>
