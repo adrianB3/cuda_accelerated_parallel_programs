@@ -1,10 +1,9 @@
 /*
  ============================================================================
  Name        : fast_nn.cu
- Author      : AdrianBalanescu
- Version     :
- Copyright   : Copyright 2019 Adrian Balanescu
- Description : CUDA compute reciprocals
+ Author      : Adrian Balanescu
+ Version     : 0.0
+ Description : fast nn entry point
  ============================================================================
  */
 #include "cuda_runtime.h"
@@ -13,7 +12,6 @@
 #include <iostream>
 #include <numeric>
 #include <stdlib.h>
-
 
 int main(void)
 {

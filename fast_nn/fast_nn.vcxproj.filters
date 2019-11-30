@@ -9,5 +9,27 @@
     <CudaCompile Include="src\fast_nn.cu">
       <Filter>src</Filter>
     </CudaCompile>
+    <CudaCompile Include="tensor.cu">
+      <Filter>src</Filter>
+    </CudaCompile>
+    <CudaCompile Include="nnlayer.cu">
+      <Filter>src</Filter>
+    </CudaCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="tensor.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="shape.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="nnlayer.hpp">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="shape.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
