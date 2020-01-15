@@ -44,8 +44,8 @@ const int ORTHO_VERSION = 0; // 1 is 2D version, 0 is 3D version.
 #define M_PI       3.14159265358979323846   // pi
 
 #define N_SIZE 10000
-#define BLOCK_SIZE 512 //If you put a block size higher than the maximum block size supported by the GPU your kernel wont do anything when launched (see deviceQuery)
-#define GRID_SIZE 1000
+#define BLOCK_SIZE 1024
+#define GRID_SIZE 512
 #define SOFT_FACTOR 0.00125f
 
 #define GRAVITATIONAL_CONSTANT 0.01f
@@ -405,7 +405,7 @@ int runKernelNBodySimulation()
 
 float prevX = WINDOW_W / 2, prevY = WINDOW_H / 2;
 bool mouseUp = 0;
-bool toggleHelp = true;
+bool toggleHelp = false;
 
 extern float3 pos[N_SIZE];
 extern float3 vel[N_SIZE];
